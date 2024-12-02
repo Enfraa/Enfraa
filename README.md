@@ -22,7 +22,7 @@
                 confirmButtonColor: '#3085d6',
             });
             async function mulai(){
-                await swals.fire('Halo Ayu sayang', 'Aku mau tanya...', 'question');
+                await swals.fire('Halo kinjeng bau', 'Aku mau tanya...', 'question');
                 await swals.fire('Jawab jujur ya!');
                 await swals.fire('JANGAN BOHONG😡!!','','error');
                 var { value: nama } = await swals.fire({
@@ -32,13 +32,13 @@
                 });
                 if(nama){
                     var { isConfirmed: sayang } = await swals.fire({
-                        title: `${nama} sayang ga sama ${author}`,
+                        title: `${nama} sayang ga sama kadal?`,
                         confirmButtonText: 'Sayang',
                         cancelButtonText: 'Gak',
                         showCancelButton: true,
                     });
                     if(sayang){
-                        await swals.fire('Aku juga sayang banget sama kamu');
+                        await swals.fire('Aku juga sayang banget sama kinjeng😝');
                         var { value: persen } = await swals.fire({
                             title: 'Seberapa sayang emangnya?',
                             icon: 'question',
@@ -51,15 +51,15 @@
                             inputValue: 50
                         });
                         if(persen){
-                            await swals.fire(`Makasih ya udah sayang sama ${author} ${persen}%`);
+                            await swals.fire(`Makasih ya udah sayang sama kadal ${persen}%`);
                             var { isConfirmed: kangen } = await swals.fire({
-                                title: 'Sekarang kamu kangen ga sama aku?',
-                                confirmButtonText: 'Kangen',
+                                title: 'Senang ga aku buatin ini?',
+                                confirmButtonText: 'senang',
                                 cancelButtonText: 'Gak!',
                                 showCancelButton: true,
                             });
                             if(kangen){
-                                await swals.fire('Huhu iya aku juga kangen kamu :((');
+                                await swals.fire('Huuu dasar kinjeng bau😝 :((');
                                 await swals.fire('Terakhir deh sayang');
                                 await swals.fire('Coba klik gambar hati di paling bawah🤭');
                             } else {
